@@ -1,5 +1,7 @@
 # SkillAPI
 
+!!! warning "以下内容基于`1.7.10`版本"
+
 一个修改自静态技能模组[GotoLink/SkillAPI](https://github.com/GotoLink/SkillAPI)的动态技能编辑器。用户可根据预置的基本技能效果进行拼装、填写参数，设置技能名、描述内容、冷却时间等等基本参数来完成一个技能的构建。
 
 ## 使用方法
