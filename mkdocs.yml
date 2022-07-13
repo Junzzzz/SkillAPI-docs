@@ -1,4 +1,68 @@
 site_name: SkillAPI
+site_url: https://junzzzz.github.io/SkillAPI-docs/
+site_author: Junzzzz
+site_description: "Minecraft 1.7.10 动态技能编辑模组"
+edit_uri: https://github.com/Junzzzz/SkillAPI-docs/blob/main/docs/
 
+# Repository
+repo_name: Junzzzz/SkillAPI
+repo_url: https://github.com/Junzzzz/SkillAPI
+
+# Copyright
+copyright: Copyright &copy; 2022 Junzzzz
+
+# Configuration
 theme:
   name: material
+  language: zh
+  
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换黑暗模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换白天模式
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      auto_title: true
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: Junzzzz
+      repo: SkillAPI
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - '首页':
+    - '概述': index.md

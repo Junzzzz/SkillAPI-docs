@@ -1,17 +1,28 @@
-# Welcome to MkDocs
+# SkillAPI
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+一个修改自静态技能模组[GotoLink/SkillAPI](https://github.com/GotoLink/SkillAPI)的动态技能编辑器。用户可根据预置的基本技能效果进行拼装、填写参数，设置技能名、描述内容、冷却时间等等基本参数来完成一个技能的构建。
 
-## Commands
+## 使用方法
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+添加该MOD作为依赖，并在初始化函数中添加以下内容
 
-## Project layout
+```java
+@Mod(modid = "demo", name = "Demo", useMetadata = true, dependencies = "required-after:skillapi")
+public final class DemoMod {
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        // 扫面全部包
+        SkillApi.preInit(event);
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        // 或者 限定扫描范围
+        SkillApi.preInit(event, "demo");
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        SkillApi.init(event);
+    }
+}
+```
+
+然后就能快乐的使用本MOD提供的各种<del>奇怪</del>接口了
