@@ -1,4 +1,4 @@
-site_name: SkillAPI
+site_name: SkillAPI 文档
 site_url: https://junzzzz.github.io/SkillAPI-docs/
 site_author: Junzzzz
 site_description: "Minecraft 1.7.10 动态技能编辑模组"
@@ -15,7 +15,26 @@ copyright: Copyright &copy; 2022 Junzzzz
 theme:
   name: material
   language: zh
-  
+  features:
+    - content.code.annotate
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+
   palette:
     - scheme: default
       primary: indigo
@@ -30,7 +49,20 @@ theme:
         icon: material/brightness-4
         name: 切换白天模式
 
+# Plugins
+plugins:
+  - search
+
 markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -41,7 +73,7 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
       emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight:
-      auto_title: true
+      # auto_title: true
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -66,3 +98,6 @@ markdown_extensions:
 nav:
   - '首页':
     - '概述': index.md
+  - '使用方法':
+    - '介绍': usage/introduction.md
+
