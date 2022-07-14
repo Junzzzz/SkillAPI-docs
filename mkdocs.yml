@@ -5,8 +5,8 @@ site_description: "Minecraft 1.7.10 动态技能编辑模组"
 edit_uri: https://github.com/Junzzzz/SkillAPI-docs/blob/main/docs/
 
 # Repository
-repo_name: Junzzzz/SkillAPI
-repo_url: https://github.com/Junzzzz/SkillAPI
+# repo_name: Junzzzz/SkillAPI
+# repo_url: https://github.com/Junzzzz/SkillAPI
 
 # Copyright
 copyright: Copyright &copy; 2022 Junzzzz
@@ -41,13 +41,16 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: 切换黑暗模式
+        name: 切换夜晚模式
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
         name: 切换白天模式
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 # Plugins
 plugins:
@@ -67,6 +70,7 @@ markdown_extensions:
       generic: true
   - pymdownx.betterem:
       smart_enable: all
+  - pymdownx.critic
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
@@ -105,5 +109,9 @@ nav:
     - '数据包': usage/packet.md
     - '数据包序列化器': usage/packet-serializer.md
     - '监听事件': usage/event.md
-
+    - '工具类': 
+      - '消息': usage/utils/message.md
+      - '翻译': usage/utils/translation.md
+    - '其他': 
+      - 'SkillExtraInfo': usage/other/skill-extra-info.md
 
