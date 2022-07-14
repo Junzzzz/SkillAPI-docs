@@ -23,7 +23,7 @@ public class DemoStaticSkill extends AbstractStaticSkill {
     }
 
     @Override
-    public void effect(EntityPlayer player, SkillExtraInfo extraInfo) {
+    public void unleash(EntityPlayer player, SkillExtraInfo extraInfo) {
         Message.send(player, "Unleash static skill");
     }
 }
@@ -55,12 +55,15 @@ protected void init(StaticSkillBuilder builder) {
 
 至于技能名与技能描述这两个内容存放在语言文件中，路径分别为：
 
- - `skill.static.<modID>.<类名>`
- - `skill.static.<modID>.<类名>.description`
+| 路径                                          |   内容   |
+| :-------------------------------------------- | :------: |
+| `skill.static.<ModID>.<技能类名>`             |  技能名  |
+| `skill.static.<ModID>.<技能类名>.description` | 技能描述 |
+
 
 以上述代码以及中文语言为例：
 
-```lang title="zh_CN.lang"
+```properties title="zh_CN.lang"
 skill.static.skillapi.DemoStaticSkill=静态技能样例
 skill.static.skillapi.DemoStaticSkill.description=技能描述样例
 ```
@@ -114,7 +117,7 @@ public boolean canUnleash(EntityPlayer player, SkillExtraInfo extraInfo) {
 }
 
 @Override
-public void effect(EntityPlayer player, SkillExtraInfo extraInfo) {
+public void unleash(EntityPlayer player, SkillExtraInfo extraInfo) {
     EntityPlayer target = extraInfo.get("target");
     Message.send(target, "You got hit by a skill");
     Message.send(player, "Unleash static skill");
@@ -182,7 +185,7 @@ public class DemoStaticSkill extends AbstractStaticSkill {
     }
 
     @Override
-    public void effect(EntityPlayer player, SkillExtraInfo extraInfo) {
+    public void unleash(EntityPlayer player, SkillExtraInfo extraInfo) {
         EntityPlayer target = extraInfo.get("target");
         Message.send(target, "You got hit by a skill");
         Message.send(player, "Unleash static skill");
