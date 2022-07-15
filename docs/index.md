@@ -28,3 +28,5 @@ public final class DemoMod {
 ```
 
 然后就能快乐的使用本MOD提供的各种{--奇怪--}接口了
+
+[下一步](./usage/skill/static-skill.md){ .md-button .md-button--primary }

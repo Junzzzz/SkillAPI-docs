@@ -105,14 +105,15 @@ nav:
     - '概述': index.md
     - '介绍': introduction.md
   - '使用方法':
-    - '静态技能': usage/static-skill.md
-    - '技能效果': usage/skill-effect.md
-    - '数据包': usage/packet.md
-    - '数据包序列化器': usage/packet-serializer.md
-    - '监听事件': usage/event.md
+    - '技能':      
+      - '静态技能': usage/skill/static-skill.md
+      - '技能效果': usage/skill/skill-effect.md
+      - '额外参数传递': usage/skill/skill-extra-info.md
+    - '增强':      
+        - '数据包': usage/enhanced/packet.md
+        - '监听事件': usage/enhanced/event.md
     - '工具类': 
-      - '消息': usage/utils/message.md
-      - '翻译': usage/utils/translation.md
-    - '其他': 
-      - 'SkillExtraInfo': usage/other/skill-extra-info.md
+        - '消息': usage/utils/message.md
+        - '翻译': usage/utils/translation.md
+      
 

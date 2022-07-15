@@ -35,7 +35,7 @@ public class DemoStaticSkill extends AbstractStaticSkill {
 
     所示代码中`Message.send()`方法为模组中编写的工具类，其效果等价于`player.addChatComponentMessage(new ChatComponentText("Unleash static skill"));`
 
-    详见：[消息工具](./utils/message.md "消息工具")
+    详见：[消息工具](../utils/message.md "消息工具")
 
 ## 技能初始化
 
@@ -97,7 +97,7 @@ public boolean clientBeforeUnleash(EntityPlayer player, SkillExtraInfo extraInfo
     1. 由于客户端数据和服务器数据并不会在时间上保持一致。例如当玩家朝目标释放技能时，会向服务器发送释放技能的数据包，如果在{==服务器收到指令后==}再获取玩家的释放目标，会导致{==获取目标错误==}甚至无法获取目标的情况。
     2. `SkillExtraInfo`只能存放基本数据类型
 
-    详见：[SkillExtraInfo](./other/skill-extra-info.md "技能额外参数传递")
+    详见：[SkillExtraInfo](./skill-extra-info.md "技能额外参数传递")
 
 
 ## 释放条件
