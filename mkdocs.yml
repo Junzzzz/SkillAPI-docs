@@ -115,5 +115,6 @@ nav:
     - '工具类': 
         - '消息': usage/utils/message.md
         - '翻译': usage/utils/translation.md
-      
+  - '高级':
+    - '注解处理器': advanced/annotation-processor.md      
 
